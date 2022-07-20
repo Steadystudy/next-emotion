@@ -1,7 +1,12 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import styled from "@emotion/styled";
+
+export const SPAN = styled.span`
+  color: pink;
+`;
 
 const Home: NextPage = () => {
   return (
@@ -18,13 +23,13 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
+            <SPAN>Documentation &rarr;</SPAN>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
@@ -45,7 +50,7 @@ const Home: NextPage = () => {
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
+            <SPAN>Deploy &rarr;</SPAN>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
@@ -59,14 +64,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
+          Powered by{" "}
+          <SPAN className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          </SPAN>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
