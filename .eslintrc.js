@@ -7,6 +7,8 @@ module.exports = {
   parser: '@typescript-eslint/parser', // @typescript-eslint/parser
   extends: [
     'next/core-web-vitals',
+    'airbnb',
+    'airbnb/hooks',
     'plugin:react/recommended', // eslint-plugin-react
     'plugin:@typescript-eslint/recommended', // @typescript-eslint/eslint-plugin
     'plugin:prettier/recommended', // eslint-plugin-prettier
@@ -27,6 +29,9 @@ module.exports = {
     'import/no-unresolved': 'off',
     'no-underscore-dangle': 'off',
     'react/react-in-jsx-scope': 0,
+    'import/prefer-default-export': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/extensions': 0,
   },
   ignorePatterns: ['*.config.js'], // 제외하려는 파일
 };
